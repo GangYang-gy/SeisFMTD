@@ -412,7 +412,7 @@ class DHMC_MT(DCAP):
 
             # ---- controlled logging ----
             if i % 50 == 0:
-                print(f"Iter {i}/{total_iter} | acc_rate = {accepted/i:.3f}")
+                print(f"Iter {m}/{total_iter} | acc_rate = {accepted/m:.3f}")
     
         acceptance_rate = accepted / total_iter
         print(f"Final acceptance rate is {acceptance_rate:.4f} | {accepted}/{total_iter}")
