@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SeisFMTD"
+version = "0.1.0"
+description = "Seismic Full Moment Tensor Determination using Hamiltonian Monte Carlo"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Gang Yang", email = "your.email@example.com"}
+]
+keywords = ["seismology", "moment tensor", "inversion", "HMC", "Bayesian"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "obspy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "flake8",
+]
+
+[project.urls]
+Homepage = "https://github.com/GangYang-gy/SeisFMTD"
+Repository = "https://github.com/GangYang-gy/SeisFMTD"
+Issues = "https://github.com/GangYang-gy/SeisFMTD/issues"
+
+[tool.setuptools.packages.find]
+include = ["pyCAPLunar*", "pyCAPSolvers*", "MTTools*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
