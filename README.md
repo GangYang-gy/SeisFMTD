@@ -38,21 +38,30 @@ pip install -e .
 ## Package Structure
 
 ```
-SeisFMTD/
-├── pyCAPLunar/       # Core CAP (Cut-and-Paste) functionality
-│   ├── DCAP.py       # Main CAP inversion module
-│   ├── DCut.py       # Waveform cutting utilities
-│   ├── DPaste.py     # Waveform pasting/stitching
-│   ├── DFilters.py   # Signal filtering functions
-│   ├── DMisfit.py    # Misfit calculations
-│   └── GTools.py     # Green's function tools
-├── pyCAPSolvers/     # HMC solvers
-│   ├── DHMC_linear.py      # Linear HMC solver for full moment tensor
-│   └── DHMC_mtd_linear.py  # Linear HMC solver for full moment tensor plus depth
-├── MTools/     # Moment tensor tools
-    ├── DMomentTensors.py   # Moment tensor operations
-    ├── DLune.py            # Lune diagram tools
-    └── DOrientations.py    # Orientation conversions
+SeisFMTD/                          # Repository root
+├── pyproject.toml
+├── README.md
+├── LICENSE
+├── .gitignore
+├── examples/                      # Usage examples (not part of package)
+│   ├── run_hmc_mt_example.py
+│   └── run_hmc_mtd_example.py
+└── SeisFMTD/                      # Python package
+    ├── __init__.py
+    ├── pyCAPLunar/                # Core CAP functionality
+    │   ├── DCAP.py
+    │   ├── DCut.py
+    │   ├── DPaste.py
+    │   ├── DFilters.py
+    │   ├── DMisfit.py
+    │   └── GTools.py
+    ├── pyCAPSolvers/              # HMC solvers
+    │   ├── DHMC_linear.py
+    │   └── DHMC_mtd_linear.py
+    └── MTTools/                   # Moment tensor utilities
+        ├── DMomentTensors.py
+        ├── DLune.py
+        └── DOrientations.py
 ```
 
 ## Quick Start
@@ -63,6 +72,12 @@ from pyCAPSolvers import DHMC_linear
 
 # Example usage (to be added)
 ```
+
+## Examples
+
+See the [`examples/`](examples/) directory for complete working examples:
+
+- **`run_hmc_example.py`** - Complete template for HMC moment tensor inversion
 
 ## Documentation
 

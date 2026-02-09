@@ -51,7 +51,8 @@ Repository = "https://github.com/GangYang-gy/SeisFMTD"
 Issues = "https://github.com/GangYang-gy/SeisFMTD/issues"
 
 [tool.setuptools.packages.find]
-include = ["pyCAPLunar*", "pyCAPSolvers*", "MTTools*"]
+where = ["."]
+include = ["SeisFMTD*"]
 
 [tool.black]
 line-length = 88
