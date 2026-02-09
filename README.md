@@ -12,7 +12,6 @@ SeisFMTD is a Python package for seismic full moment tensor inversion using Hami
 - Full moment tensor inversion with uncertainty quantification
 - Cut-and-paste waveform fitting
 - Green's function handling and processing
-- Lune diagram visualization
 
 ## Installation
 
@@ -31,6 +30,10 @@ pip install -e .
 - SciPy
 - ObsPy
 - Matplotlib
+- [Pyrocko](https://pyrocko.org/) - Seismology toolbox
+- [MTfit](https://github.com/djpugh/MTfit) - Moment tensor fitting
+- utm - UTM coordinate conversion
+- seisgen - Seismogram generation (may require separate installation)
 
 ## Package Structure
 
@@ -44,9 +47,9 @@ SeisFMTD/
 │   ├── DMisfit.py    # Misfit calculations
 │   └── GTools.py     # Green's function tools
 ├── pyCAPSolvers/     # HMC solvers
-│   ├── DHMC_linear.py      # Linear HMC solver
-│   └── DHMC_mtd_linear.py  # Multi-threaded HMC solver
-└── MTTools/          # Moment tensor utilities
+│   ├── DHMC_linear.py      # Linear HMC solver for full moment tensor
+│   └── DHMC_mtd_linear.py  # Linear HMC solver for full moment tensor plus depth
+├── MTools/     # Moment tensor tools
     ├── DMomentTensors.py   # Moment tensor operations
     ├── DLune.py            # Lune diagram tools
     └── DOrientations.py    # Orientation conversions

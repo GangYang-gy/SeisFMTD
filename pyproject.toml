@@ -9,7 +9,7 @@ description = "Seismic Full Moment Tensor Determination using Hamiltonian Monte 
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Gang Yang", email = "your.email@example.com"}
+    {name = "Gang Yang", email = "gangy.yang@mail.utoronto.ca"}
 ]
 keywords = ["seismology", "moment tensor", "inversion", "HMC", "Bayesian"]
 classifiers = [
@@ -30,7 +30,12 @@ dependencies = [
     "scipy",
     "obspy",
     "matplotlib",
+    "pyrocko",
+    "MTfit",
+    "utm",
 ]
+
+# Note: 'seisgen' may need to be installed separately if not available on PyPI
 
 [project.optional-dependencies]
 dev = [
