@@ -1,0 +1,12 @@
+misfit threshold = 5.0
+reject rate = 1.0
+CC threshold = 0.2
+taper scale = -0.4
+taper rate = 0.0
+weight (PNL) = 1.0
+weight (S/Surface) = 1.0
+
+Solver
+Epsilon = 0.09356852603112574
+Step = None
+sigma_d = 0.1
